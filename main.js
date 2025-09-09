@@ -42,19 +42,19 @@ geraSenha();
 
 function geraSenha() {
     let alfabeto = '';
-    if (checkbox[0].checked){
+    if (checkbox[0].checked) {
         alfabeto = alfabeto + letrasMaiusculas;
     }
-    
-    if (checkbox[1].checked){
+
+    if (checkbox[1].checked) {
         alfabeto = alfabeto + letrasMinusculas;
     }
 
-     if (checkbox[2].checked){
+    if (checkbox[2].checked) {
         alfabeto = alfabeto + numeros;
     }
 
-     if (checkbox[3].checked){
+    if (checkbox[3].checked) {
         alfabeto = alfabeto + simbolos;
     }
 
@@ -66,7 +66,7 @@ function geraSenha() {
         senha = senha + letrasMaiusculas[numeroAleatorio];
     }
     campoSenha.value = senha;
-}const numeroSenha = document.querySelector('.parametro-senha__texto');
+} const numeroSenha = document.querySelector('.parametro-senha__texto');
 let tamanhoSenha = 12;
 numeroSenha.textContent = tamanhoSenha;
 
@@ -108,19 +108,19 @@ geraSenha();
 
 function geraSenha() {
     let alfabeto = '';
-    if (checkbox[0].checked){
+    if (checkbox[0].checked) {
         alfabeto = alfabeto + letrasMaiusculas;
     }
-    
-    if (checkbox[1].checked){
+
+    if (checkbox[1].checked) {
         alfabeto = alfabeto + letrasMinusculas;
     }
 
-     if (checkbox[1].checked){
+    if (checkbox[1].checked) {
         alfabeto = alfabeto + numeros;
     }
 
-     if (checkbox[3].checked){
+    if (checkbox[3].checked) {
         alfabeto = alfabeto + simbolos;
     }
 
@@ -135,7 +135,15 @@ function geraSenha() {
     classificaSenha();
 }
 
-function classificaSenha(){
-    forcaSenha.classList.remove('fraca','media','forte');
-    if
+function classificaSenha() {
+    forcaSenha.classList.remove('fraca', 'media', 'forte');
+    if (tamanhoSenha > 11) {
+        forcaSenha.ClassList.add('forte');
+        else if (tamanhoSenha > 5 && tamamnhoSenha < 12) {
+            forcaSenha.classList.add('media');
+            else if (tamanhoSenha <= 5) {
+                forcaSenha.classList.add('fraca')
+            }
+        }
+    }
 }
