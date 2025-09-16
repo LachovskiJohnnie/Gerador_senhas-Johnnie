@@ -61,7 +61,7 @@ function geraSenha() {
         senha = senha + alfabeto[numeroAleatorio];
     }
     campoSenha.value = senha;
-    classificaSenha(alfabeto.lenght);
+    classificaSenha(alfabeto.length);
 }
 
 function classificaSenha() {
@@ -77,7 +77,8 @@ function classificaSenha() {
         forcaSenha.classList.add('fraca');
     }
 
-    const valoEntropia = document.querySelector('.entropia');
-    valorEntropia.textContent = "Um comutador pode levar até" +
+    const valorEntropia = document.querySelector('.entropia');
+    valorEntropia.textContent = "Um computador pode levar até " + 
     Math.floor(2**entropia/(100e6*60*60*24)) + " dias para descobrir essa senha.";
+
 }
